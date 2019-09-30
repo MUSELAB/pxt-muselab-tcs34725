@@ -3,11 +3,9 @@
 namespace MuseColorRecognition {
 
     /**
-     * initialises the i2c OLED display
-     * @param height height (in pixels)
-     * @param width width (in pixels)
+     * initialises the i2c TCS34725 display
      */
-    //% blockId=oled_init_terminal
+    //% blockId=TCS34725_init_terminal
     //% block="initialize TCS34725"
     //% icon="\uf1ec" 
     //% shim=TCS34725::TCS34725_Init
@@ -20,7 +18,6 @@ namespace MuseColorRecognition {
 
     /**
      * prints a Get TCS34725 RGB data
-     * @param text text to display
      */
     //% weight=87
     //% block="Get_RGB" 
@@ -36,7 +33,6 @@ namespace MuseColorRecognition {
 
         /**
      * prints a Show TCS34725 red data
-     * @param text text to display
      */
     //% weight=87
     //% block="Show_Red_Number" 
@@ -52,7 +48,6 @@ namespace MuseColorRecognition {
 
         /**
      * prints a Show TCS34725 green data
-     * @param text text to display
      */
     //% weight=87
     //% block="Show_Green_Number" 
