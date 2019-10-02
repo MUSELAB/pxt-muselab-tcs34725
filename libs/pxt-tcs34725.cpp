@@ -17,19 +17,19 @@ namespace MuseTCS34725{
         TCS34725_dev->Get_Data();
     }
 
-    void Show_Red_Number()
+    void Get_Colour(TCS34725TemStyle style)
     {
-        TCS34725_dev->Get_Green();
+        switch(style)
+            case GRT_RED：
+                TCS34725_dev->Get_Red();
+            break;
+            case GRT_GREEN：
+                TCS34725_dev->Get_Green();
+            break;
+            case GRT_BLUE：
+                TCS34725_dev->Get_Blue();
+            break;
     }
 
-    void Show_Green_Number()
-    {
-        TCS34725_dev->Show_Red_Number();
-    }
-
-    void Show_Blue_Number()
-    {
-        TCS34725_dev->Get_Blue();
-    }
 
 }
