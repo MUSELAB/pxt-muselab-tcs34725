@@ -7,12 +7,10 @@
         "core": "*"
     },
     "files": [
-        "README.md",
-        "minode.ts",
-      
-        "shims.d.ts",
-        "enums.ts",
-        "enums.d.ts"
+
+        "minode.ts"
+
+
     ],
     "testFiles": [
         "tests.ts"
