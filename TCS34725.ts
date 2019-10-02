@@ -1,78 +1,61 @@
 //% icon="\uf26c"
 //% color="#F59E20" weight="99"
-namespace MuseColorRecognition {
+namespace MuseOLED {
 
     /**
-     * initialises the i2c TCS34725 display
+     * initialises the i2c OLED display
+     * @param height height (in pixels)
+     * @param width width (in pixels)
      */
-    //% blockId=TCS34725_init_terminal
-    //% block="initialize TCS34725"
+    //% blockId=oled_init_terminal
+    //% block="initialize OLED with height %height|width %width"
     //% icon="\uf1ec" 
-    //% shim=pxt_tcs34725::TCS34725_Init
+    //% shim=OLED::init_terminal
 	//% weight=90	
 	//% blockGap=8
-    export function init(): void {
+    export function init(height: number, width: number): void {
         return;
     }
-
 
     /**
-     * Get TCS34725 RGB data
+     * clears the screen.
      */
-    //% weight=87
-    //% block="Get_RGB" 
-    //% async
-    //% blockId=Get_TCS34725_RGB_Data
-    //% icon="\uf1ec"
-    //% shim=pxt_tcs34725::Get_Data
-	//% weight=85	
-	//% blockGap=8
-    export function Get(): void {
+    //% blockId=oled_clear_screen
+    //% block="clear OLED display"
+    //% icon="\uf1ec" 
+    //% shim=OLED::clearDisplay
+    export function clear(): void {
         return;
     }
 
-        /**
-     * prints a  TCS34725 red data
+    /**
+     * prints a string on the OLED display
+     * @param text text to display
      */
     //% weight=87
-    //% block="Show_Red_Number" 
+    //% block="show OLED string %text" 
     //% async
-    //% blockId=Show_Red_Number
+    //% blockId=oled_print_string
     //% icon="\uf1ec"
-    //% shim=pxt_tcs34725::Get_Red
+    //% shim=OLED::showString
 	//% weight=85	
 	//% blockGap=8
-    export function Show_Red_Number(): void {
+    export function showString(text: string): void {
+        console.log("display: " + text);
         return;
     }
 
-        /**
-     * prints a TCS34725 green data
+    /**
+     * prints a number on the OLED display
+     * @param number number to display
      */
-    //% weight=87
-    //% block="Show_Green_Number" 
-    //% async
-    //% blockId=Show_Green_Number
-    //% icon="\uf1ec"
-    //% shim=pxt_tcs34725::Get_Green
-	//% weight=85	
-	//% blockGap=8
-    export function Show_Green_Number(): void {
-        return;
-    }
-
-        /**
-     * prints a TCS34725 Blue data
-     */
-    //% weight=87
-    //% block="Show_Blue_Number" 
-    //% async
-    //% blockId=Show_blue_Number
-    //% icon="\uf1ec"
-    //% shim=pxt_tcs34725::Get_Blue
-	//% weight=85	
-	//% blockGap=8
-    export function Show_Blue_Number(): void {
+    //% weight=80
+    //% blockId=oled_print_number
+    //% block="show OLED number %number"
+    //% async 
+    //% shim=OLED::showNumber
+    export function showNumber(number: number): void {
+        console.log("display: " + number);
         return;
     }
 }
