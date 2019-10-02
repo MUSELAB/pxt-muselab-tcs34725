@@ -1,0 +1,26 @@
+{
+    "name": "SSD1306_OLED",
+    "version": "1.1.1",
+    "description": "Tinkercademy package for SSD1306 OLED controller",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "ssd1306.ts",
+        "SSD1306_OLED.cpp",
+        "Adafruit_SSD1306.h",
+        "Adafruit_SSD1306.cpp",
+        "Adafruit_GFX.h",
+        "Adafruit_GFX.cpp",
+        "Adafruit_GFX_Config.h",
+        "glcdfont.h",
+        "enums.d.ts"
+    ],
+    "testFiles": [
+        "tests.ts"
+    ],
+    "public": true,
+    "preferredEditor": "tsprj"
+}
