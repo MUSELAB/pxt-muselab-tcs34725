@@ -17,7 +17,7 @@ namespace MuseColorRecognition {
 
 
     /**
-     * prints a Get TCS34725 RGB data
+     * Get TCS34725 RGB data
      */
     //% weight=87
     //% block="Get_RGB" 
@@ -32,7 +32,7 @@ namespace MuseColorRecognition {
     }
 
         /**
-     * prints a Show TCS34725 red data
+     * prints a  TCS34725 red data
      */
     //% weight=87
     //% block="Show_Red_Number" 
@@ -47,7 +47,7 @@ namespace MuseColorRecognition {
     }
 
         /**
-     * prints a Show TCS34725 green data
+     * prints a TCS34725 green data
      */
     //% weight=87
     //% block="Show_Green_Number" 
@@ -62,8 +62,7 @@ namespace MuseColorRecognition {
     }
 
         /**
-     * prints a Show TCS34725 Blue data
-     * @param text text to display
+     * prints a TCS34725 Blue data
      */
     //% weight=87
     //% block="Show_Blue_Number" 

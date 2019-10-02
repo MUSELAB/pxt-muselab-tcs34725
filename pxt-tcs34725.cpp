@@ -8,8 +8,8 @@ namespace pxt_tcs34725 {
     TCS34725 *TCS34725_dev;
     void Init()
     {
-            i2c_dev = new I2Cdev(i2c);
-            TCS34725_dev = new TCS34725();
+        i2c_dev = new I2Cdev(i2c);
+        TCS34725_dev = new TCS34725();
     }
 
     void Get()
