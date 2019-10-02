@@ -2,7 +2,7 @@
 #include "TCS34725.h"
 using namespace pxt;
 
-namespace pxt_tcs34725 {
+namespace MuseTCS34725{
     MicroBitI2C i2c(I2C_SDA0, I2C_SCL0);
     I2Cdev *i2c_dev;
     TCS34725 *TCS34725_dev;
