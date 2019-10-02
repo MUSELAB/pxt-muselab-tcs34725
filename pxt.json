@@ -1,24 +1,46 @@
 {
-    "name": "pxt-muselab-TCS34725",
+    "name": "pxt-muselab-sensors",
     "version": "1.0.0",
-    "description": "Tinkercademy package for TCS34725 controller",
+    "description": "Sensors Plugin for MuseIoT using muselab products in PXT",
     "license": "MIT",
     "dependencies": {
         "core": "*"
     },
     "files": [
-        "TCS34725.ts",
-        "TCS34725.cpp",
-        "TCS34725.h",
-        "pxt-tcs34725.cpp",
-        "DEV_Config.cpp",
-        "DEV_Config.h",
-        "enums.d.ts",
-        "shims.d.ts"
+        "README.md",
+        "minode.ts",
+        "libs/MiNode.h",
+        "libs/MiNodeComponent.h",
+        "libs/MiNodeComponent.cpp",
+        "libs/MiNodeConn.h",
+        "libs/MiNodeConn.cpp",
+        "libs/MiNodeIO.h",
+        "libs/MiNodeIO.cpp",
+        "libs/MiNodeModulePool.h",
+        "libs/MiNodeRGB.h",
+        "libs/MiNodeRGB.cpp",
+        "libs/MiNodeDHT11.cpp",
+        "libs/MiNodeDHT11.h",
+        "libs/MiNodeSwitch.cpp",
+        "libs/MiNodeSwitch.h",
+        "libs/MiNodeRotary.cpp",
+        "libs/MiNodeRotary.h",
+        "libs/MiNodePIR.cpp",
+        "libs/MiNodePIR.h",
+        "libs/MiNodeMIC.cpp",
+        "libs/MiNodeMIC.h",
+        "libs/MiNodeLightSensor.cpp",
+        "libs/MiNodeLightSensor.h",
+        "libs/MiNodeFan.cpp",
+        "libs/MiNodeFan.h",
+        "libs/minode.cpp",
+        "shims.d.ts",
+        "enums.ts",
+        "enums.d.ts"
     ],
     "testFiles": [
         "tests.ts"
     ],
     "public": true,
-    "preferredEditor": "tsprj"
+    "installedVersion": "file:../pxt-minode"
 }
