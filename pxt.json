@@ -1,5 +1,5 @@
 {
-    "name": "TCS34725",
+    "name": "pxt-muselab-TCS34725",
     "version": "1.0.0",
     "description": "Tinkercademy package for TCS34725 controller",
     "license": "MIT",
@@ -13,7 +13,8 @@
         "pxt-tcs34725.cpp",
         "DEV_Config.cpp",
         "DEV_Config.h",
-        "enums.d.ts"
+        "enums.d.ts",
+        "shims.d.ts"
     ],
     "testFiles": [
         "tests.ts"
