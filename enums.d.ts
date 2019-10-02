@@ -1,5 +1,5 @@
 // Auto-generated. Do not edit.
-declare namespace MuseOLED {
+declare namespace MuseColorRecognition {
 }
 
 // Auto-generated. Do not edit. Really.
