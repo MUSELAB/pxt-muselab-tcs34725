@@ -1,6 +1,6 @@
 //% icon="\uf26c"
 //% color="#F59E20" weight="99"
-namespace MuseColorRecognition {
+namespace MuseTCS34725 {
 
     /**
      * initialises the i2c TCS34725 display
