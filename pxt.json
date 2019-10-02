@@ -10,6 +10,7 @@
         "TCS34725.ts",
         "TCS34725.cpp",
         "TCS34725.h",
+        "pxt-tcs34725.cpp",
         "DEV_Config.cpp",
         "DEV_Config.h",
         "enums.d.ts"
