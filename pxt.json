@@ -1,20 +1,17 @@
 {
-    "name": "pxt-muselab-sensors",
+    "name": "pxt-muselab-TCS34725",
     "version": "1.0.0",
-    "description": "Sensors Plugin for MuseIoT using muselab products in PXT",
+    "description": "Tinkercademy package for TCS34725 controller",
     "license": "MIT",
     "dependencies": {
         "core": "*"
     },
     "files": [
-
-        "minode.ts"
-
-
+        "TCS34725.ts"
     ],
     "testFiles": [
         "tests.ts"
     ],
     "public": true,
-    "installedVersion": "file:../pxt-minode"
+    "preferredEditor": "tsprj"
 }
