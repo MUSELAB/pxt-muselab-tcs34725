@@ -28,8 +28,21 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 ******************************************************************************/
+
+#ifndef TCS34725_H
+#define TCS34725_H
+
 #include "DEV_Config.h"
 
+#include "mbed.h"
+
+#include "MicroBitConfig.h"
+#include "MicroBitComponent.h"
+#include "MicroBitEvent.h"
+#include "MiNodeComponent.h"
+#include "MiNodeConn.h"
+#include "MicroBitDisplay.h"
+#include "MicroBitSystemTimer.h"
 /**
 * Device address
 **/
@@ -108,7 +121,6 @@
 #define TCS34725_DF 310.0
 #define TCS34725_CT_Coef 3810.0
 #define TCS34725_CT_Offset 1391.0
-
 
 
 typedef enum
@@ -199,3 +211,5 @@ private:
   void TCS34725_Clear_Interrupt_Flag();
 
 };
+
+#endif
