@@ -7,7 +7,14 @@
         "core": "*"
     },
     "files": [
-        "TCS34725.ts"
+        "TCS34725.ts",
+        "libs/TCS34725.cpp",
+        "libs/TCS34725.h",
+        "libs/pxt-tcs34725.cpp",
+        "libs/DEV_Config.cpp",
+        "libs/DEV_Config.h",
+        "enums.d.ts",
+        "shims.d.ts"
     ],
     "testFiles": [
         "tests.ts"
