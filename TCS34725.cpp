@@ -189,7 +189,7 @@ parameter	:
 UBYTE  TCS34725::TCS34725_Init(void)
 {
 	UBYTE ID = 0;
-	DEV_Set_I2CAddress(TCS34725_ADDRESS);
+	I2Cdev::DEV_Set_I2CAddress(TCS34725_ADDRESS);
 	ID = TCS34725_ReadByte(TCS34725_ID);
 	if(ID != 0x44 && ID != 0x4D){
 			return 1;

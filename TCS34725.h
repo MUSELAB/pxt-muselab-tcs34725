@@ -114,8 +114,13 @@
 
 
 
-class TCS34725{
+class TCS34725 public: I2Cdev
+{
 public:
+  TCS34725()
+  {
+    TCS34725_Init();
+  }
   //initialization
   UBYTE TCS34725_Init(void);
   void TCS34725_SetLight(UWORD value);

@@ -8,7 +8,7 @@ namespace MuseColorRecognition {
     //% blockId=TCS34725_init_terminal
     //% block="initialize TCS34725"
     //% icon="\uf1ec" 
-    //% shim=TCS34725::TCS34725_Init
+    //% shim=pxt_tcs34725::TCS34725_Init
 	//% weight=90	
 	//% blockGap=8
     export function init(): void {
@@ -24,7 +24,7 @@ namespace MuseColorRecognition {
     //% async
     //% blockId=Get_TCS34725_RGB_Data
     //% icon="\uf1ec"
-    //% shim=TCS34725::Get_Data
+    //% shim=pxt_tcs34725::Get_Data
 	//% weight=85	
 	//% blockGap=8
     export function Get(): void {
@@ -39,7 +39,7 @@ namespace MuseColorRecognition {
     //% async
     //% blockId=Show_Red_Number
     //% icon="\uf1ec"
-    //% shim=TCS34725::Get_Red
+    //% shim=pxt_tcs34725::Get_Red
 	//% weight=85	
 	//% blockGap=8
     export function Show_Red_Number(): void {
@@ -54,7 +54,7 @@ namespace MuseColorRecognition {
     //% async
     //% blockId=Show_Green_Number
     //% icon="\uf1ec"
-    //% shim=TCS34725::Get_Green
+    //% shim=pxt_tcs34725::Get_Green
 	//% weight=85	
 	//% blockGap=8
     export function Show_Green_Number(): void {
@@ -70,7 +70,7 @@ namespace MuseColorRecognition {
     //% async
     //% blockId=Show_blue_Number
     //% icon="\uf1ec"
-    //% shim=TCS34725::Get_Blue
+    //% shim=pxt_tcs34725::Get_Blue
 	//% weight=85	
 	//% blockGap=8
     export function Show_Blue_Number(): void {
