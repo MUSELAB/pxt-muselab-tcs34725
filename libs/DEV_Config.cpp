@@ -1,14 +1,6 @@
 #include "DEV_Config.h"
 UBYTE IIC_Addr_t = IIC_Addr;
 
-void I2Cdev::Config_Init()
-{
-  
-  MicroBitI2C i2c(I2C_SDA0, I2C_SCL0);
-  MicroBitI2C mi2c;
-  
-}
-
 void I2Cdev::DEV_I2C_WriteByte(UBYTE add_, UBYTE data_)
 {
 
@@ -26,8 +18,8 @@ void I2Cdev::DEV_I2C_WriteWord(UBYTE add_, UWORD data_)
 UBYTE I2Cdev::DEV_I2C_ReadByte(UBYTE add_)
 {
   //int read( int address, char * data, int length)
-  UBYTE data；
-  mi2c.read(add_, *data, 1）
+  UBYTE data;
+  mi2c.read(add_, *data, 1);
   return data;
  
 }
@@ -36,8 +28,8 @@ UWORD I2Cdev::DEV_I2C_ReadWord(UBYTE add_)
 {
  uint16_t x; uint16_t t;
 
-  mi2c.read(add_, *t, 1）
-  mi2c.read(add_, *x, 1）
+  mi2c.read(add_, *t, 1);
+  mi2c.read(add_, *x, 1);
   
   x <<= 8;
   x |= t;

@@ -25,8 +25,6 @@ class I2Cdev{
  public:   
     I2Cdev(MicroBitI2C i2c) : mi2c(i2c)
     {};
-    void Config_Init();
-
     void DEV_Set_I2CAddress(UBYTE Add);
     void DEV_I2C_WriteByte(UBYTE add_, UBYTE data_);
     void DEV_I2C_WriteWord(UBYTE add_, UWORD data_);
