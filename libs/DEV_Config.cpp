@@ -5,21 +5,23 @@ void I2Cdev::DEV_I2C_WriteByte(UBYTE add_, UBYTE data_)
 {
 
   //int write( int address, const char * data, int length)
+  char data = data_;
 
-  mi2c.write(add_, &data_, sizeof(data_));
+  mi2c.write(add_, &data, sizeof(data_));
 }
 
 void I2Cdev::DEV_I2C_WriteWord(UBYTE add_, UWORD data_)
 {
-  mi2c.write(add_, &data_, sizeof(data_));
-  data_ = data_ >> 8;
-  mi2c.write(add_, &data_, sizeof(data_));
+  char data = data_;
+  mi2c.write(add_, &data, sizeof(data_));
+  data = data_ >> 8;
+  mi2c.write(add_, &data, sizeof(data_));
 }
 
 UBYTE I2Cdev::DEV_I2C_ReadByte(UBYTE add_)
 {
   //int read( int address, char * data, int length)
-  BYTE data;
+  char data;
   mi2c.read(add_, &data, 1);
   return (UBYTE)data;
  
@@ -27,7 +29,7 @@ UBYTE I2Cdev::DEV_I2C_ReadByte(UBYTE add_)
 
 UWORD I2Cdev::DEV_I2C_ReadWord(UBYTE add_)
 {
-  BYTE x; uint16_t t;
+  char x; uint16_t t;
 
   mi2c.read(add_, &X, 1);
   t = x;
