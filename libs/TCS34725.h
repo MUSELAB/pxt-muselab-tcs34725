@@ -39,8 +39,8 @@
 #include "MicroBitConfig.h"
 #include "MicroBitComponent.h"
 #include "MicroBitEvent.h"
-#include "MiNodeComponent.h"
-#include "MiNodeConn.h"
+//#include "MiNodeComponent.h"
+//#include "MiNodeConn.h"
 #include "MicroBitDisplay.h"
 #include "MicroBitSystemTimer.h"
 /**
