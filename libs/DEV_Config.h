@@ -23,8 +23,7 @@
 class I2Cdev{
 
  public:   
-    I2Cdev(MicroBitI2C i2c):
-    mi2c(i2c)
+    I2Cdev(MicroBitI2C i2c) : mi2c(i2c)
     {};
     void Config_Init();
 

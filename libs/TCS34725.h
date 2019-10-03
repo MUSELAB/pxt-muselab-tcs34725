@@ -129,7 +129,8 @@ enum TCS34725TemStyle
   GET_GREEN = 2,
   //% block="Bule" enumval=3
   GET_BULE = 3,
-}
+};
+
 
   /**
 * Integration Time
@@ -171,10 +172,8 @@ RGB RGB888;
 class TCS34725 : public I2Cdev
 {
 public:
-  TCS34725()
-  {
-    TCS34725_Init();
-  }
+  TCS34725(MicroBitI2C i2c) : I2Cdev(i2c)
+  {};
   //initialization
   UBYTE TCS34725_Init(void);
   void TCS34725_SetLight(UWORD value);
