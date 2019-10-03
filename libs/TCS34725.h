@@ -131,35 +131,6 @@ enum TCS34725TemStyle
   GET_BULE = 3,
 }
 
-
-class TCS34725 : public I2Cdev
-{
-public:
-  TCS34725()
-  {
-    TCS34725_Init();
-  }
-  //initialization
-  UBYTE TCS34725_Init(void);
-  void TCS34725_SetLight(UWORD value);
-  void TCS34725_Set_Gain(TCS34725Gain_t gain);
-  void TCS34725_Set_IntegrationTime(TCS34725IntegrationTime_t it);
-  // void TCS34725_Set_Config(TCS34725Gain_t gain, TCS34725IntegrationTime_t it);
-
-  //Read Color
-  RGB TCS34725_Get_RGBData(void);
-  UWORD TCS34725_Get_ColorTemp(RGB rgb);
-  UWORD TCS34725_GetRGB565(RGB rgb);
-  RGB TCS34725_GetRGB888(RGB rgb);
-  //Read Light
-  UWORD TCS34725_Get_Lux(RGB rgb);
-  UBYTE TCS34725_GetLux_Interrupt(UWORD Threshold_H, UWORD Threshold_L);
-  
-  RGB Get_Red(void);
-  RGB Get_Green(void);
-  RGB Get_Blue(void);
-  void Get_Data(void);
-
   /**
 * Integration Time
 **/
@@ -195,6 +166,36 @@ typedef struct{
 }RGB;
 
 RGB RGB888;
+
+
+class TCS34725 : public I2Cdev
+{
+public:
+  TCS34725()
+  {
+    TCS34725_Init();
+  }
+  //initialization
+  UBYTE TCS34725_Init(void);
+  void TCS34725_SetLight(UWORD value);
+  void TCS34725_Set_Gain(TCS34725Gain_t gain);
+  void TCS34725_Set_IntegrationTime(TCS34725IntegrationTime_t it);
+  // void TCS34725_Set_Config(TCS34725Gain_t gain, TCS34725IntegrationTime_t it);
+
+  //Read Color
+  RGB TCS34725_Get_RGBData(void);
+  UWORD TCS34725_Get_ColorTemp(RGB rgb);
+  UWORD TCS34725_GetRGB565(RGB rgb);
+  RGB TCS34725_GetRGB888(RGB rgb);
+  //Read Light
+  UWORD TCS34725_Get_Lux(RGB rgb);
+  UBYTE TCS34725_GetLux_Interrupt(UWORD Threshold_H, UWORD Threshold_L);
+  
+  RGB Get_Red(void);
+  RGB Get_Green(void);
+  RGB Get_Blue(void);
+  void Get_Data(void);
+
 private:
   void TCS34725_WriteByte(UBYTE add, UBYTE data);
   UBYTE TCS34725_ReadByte(UBYTE add);

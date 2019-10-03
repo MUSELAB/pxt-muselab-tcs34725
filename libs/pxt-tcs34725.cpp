@@ -21,6 +21,7 @@ namespace MuseTCS34725{
     void Show_Colour_Number(TCS34725TemStyle style)
     {
         switch(style)
+        {
             case GRT_RED:
                 TCS34725_dev->Get_Red();
             break;
@@ -30,5 +31,6 @@ namespace MuseTCS34725{
             case GRT_BLUE:
                 TCS34725_dev->Get_Blue();
             break;
+        }
     }
 }
