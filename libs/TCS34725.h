@@ -166,12 +166,10 @@ typedef struct{
    UWORD C;
 }RGB;
 
-RGB RGB888_t;
-
-
 class TCS34725 : public I2Cdev
 {
 public:
+  RGB RGB888;
   TCS34725(MicroBitI2C i2c) : I2Cdev(i2c)
   {};
   //initialization
