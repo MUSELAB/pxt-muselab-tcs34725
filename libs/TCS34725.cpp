@@ -255,12 +255,14 @@ parameter	:
 ******************************************************************************/
 UBYTE TCS34725::TCS34725_GetLux_Interrupt(UWORD Threshold_H, UWORD Threshold_L)
 {
+    /*
     TCS34725_Set_Interrupt_Threshold(Threshold_H, Threshold_L);
     if(DEV_Digital_Read(INT_PIN) == 0){
         TCS34725_Clear_Interrupt_Flag();
         TCS34725_Set_Interrupt_Persistence_Reg(TCS34725_PERS_2_CYCLE);
         return 1;
     }
+    */
     return 0;
 }
 /******************************************************************************
@@ -405,18 +407,18 @@ UWORD TCS34725::TCS34725_GetRGB565(RGB rgb)
            rgb.G = 255; 
     if(rgb.B>255)
            rgb.B = 255; 
-    //return (rgb.R << 11) | (rgb.G << 5) | (rgb.B);
+    return (rgb.R << 11) | (rgb.G << 5) | (rgb.B);
 }
 
-RGB TCS34725::Get_Red(void)
+UWORD TCS34725::Get_Red(void)
 {
     return RGB888.R;    
 }
-RGB TCS34725::Get_Green(void)
+UWORD TCS34725::Get_Green(void)
 {
     return RGB888.G;    
 }
-RGB TCS34725::Get_Blue(void)
+UWORD TCS34725::Get_Blue(void)
 {
     return RGB888.B;    
 }
@@ -434,10 +436,12 @@ parameter	:
 ******************************************************************************/
 void TCS34725::TCS34725_SetLight(UWORD value)
 {
+    /*
     if(value <= 100){
         value = value * DEV_PWM_value / 100;
         //DEV_Set_PWM(value);
-    } 
+    }
+    */
 }
 
 

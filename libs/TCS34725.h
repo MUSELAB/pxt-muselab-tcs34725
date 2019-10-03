@@ -190,23 +190,23 @@ public:
   UWORD TCS34725_Get_Lux(RGB rgb);
   UBYTE TCS34725_GetLux_Interrupt(UWORD Threshold_H, UWORD Threshold_L);
   
-  RGB Get_Red(void);
-  RGB Get_Green(void);
-  RGB Get_Blue(void);
+  UWORD Get_Red(void);
+  UWORD Get_Green(void);
+  UWORD Get_Blue(void);
   void Get_Data(void);
 
 private:
-  void TCS34725_WriteByte(UBYTE add, UBYTE data);
-  UBYTE TCS34725_ReadByte(UBYTE add);
-  UWORD TCS34725_ReadWord(UBYTE add);
-  void TCS34725_Enable(void);
+  static void TCS34725_WriteByte(UBYTE add, UBYTE data);
+  static UBYTE TCS34725_ReadByte(UBYTE add);
+  static UWORD TCS34725_ReadWord(UBYTE add);
+  static void TCS34725_Enable(void);
   void TCS34725_Disable(void);
   void TCS34725_Set_Integration_Time(TCS34725IntegrationTime_t time);
-  void TCS34725_Interrupt_Enable();
+  static void TCS34725_Interrupt_Enable();
   void TCS34725_Interrupt_Disable();
-  void TCS34725_Set_Interrupt_Persistence_Reg(UBYTE TCS34725_PER);
-  void TCS34725_Set_Interrupt_Threshold(UWORD Threshold_H, UWORD Threshold_L);
-  void TCS34725_Clear_Interrupt_Flag();
+  static void TCS34725_Set_Interrupt_Persistence_Reg(UBYTE TCS34725_PER);
+  static void TCS34725_Set_Interrupt_Threshold(UWORD Threshold_H, UWORD Threshold_L);
+  static void TCS34725_Clear_Interrupt_Flag();
 
 };
 
