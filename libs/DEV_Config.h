@@ -1,7 +1,6 @@
 #ifndef _DEV_Config_H_
 #define _DEV_Config_H_
 
-#include "uni"
 #include "mbed.h"
 #include "MicroBit.h"
 
