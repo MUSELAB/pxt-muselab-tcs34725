@@ -40,7 +40,7 @@ parameter	:
         add : Register address
         data: Written data
 ******************************************************************************/
-static void TCS34725::TCS34725_WriteByte(UBYTE add, UBYTE data)
+void TCS34725::TCS34725_WriteByte(UBYTE add, UBYTE data)
 {
     //Note: remember to add this when users write their own
     //Responsible for not finding the register, 
@@ -54,7 +54,7 @@ function:   Read a byte to TCS34725
 parameter	:
         add : Register address
 ******************************************************************************/
-static UBYTE TCS34725::TCS34725_ReadByte(UBYTE add)
+UBYTE TCS34725::TCS34725_ReadByte(UBYTE add)
 {
     add = add | TCS34725_CMD_BIT;
     return DEV_I2C_ReadByte(add);
@@ -66,7 +66,7 @@ parameter	:
         add : Register address
         data: Written data
 ******************************************************************************/
-static UWORD TCS34725::TCS34725_ReadWord(UBYTE add)
+UWORD TCS34725::TCS34725_ReadWord(UBYTE add)
 {
 
     add = add | TCS34725_CMD_BIT;
@@ -77,7 +77,7 @@ static UWORD TCS34725::TCS34725_ReadWord(UBYTE add)
 function:   
         TCS34725 wake up
 ******************************************************************************/
-static void TCS34725::TCS34725_Enable(void)
+void TCS34725::TCS34725_Enable(void)
 {
     TCS34725_WriteByte(TCS34725_ENABLE, TCS34725_ENABLE_PON);
     DEV_Delay_ms(3);
@@ -123,7 +123,7 @@ void TCS34725::TCS34725_Set_Gain(TCS34725Gain_t gain)
 /******************************************************************************
 function:   Interrupt Enable
 ******************************************************************************/
-static void TCS34725::TCS34725_Interrupt_Enable()
+void TCS34725::TCS34725_Interrupt_Enable()
 {
     UBYTE data = 0;
     data = TCS34725_ReadByte(TCS34725_ENABLE);
@@ -146,7 +146,7 @@ function:   Set Interrupt Persistence register, Interrupts need to be maintained
 parameter	:
     TCS34725_PER : reference "TCS34725.h"
 ******************************************************************************/
-static void TCS34725::TCS34725_Set_Interrupt_Persistence_Reg(UBYTE TCS34725_PER)
+void TCS34725::TCS34725_Set_Interrupt_Persistence_Reg(UBYTE TCS34725_PER)
 {
     if(TCS34725_PER < 0x10)
         TCS34725_WriteByte(TCS34725_PERS, TCS34725_PER);
@@ -164,7 +164,7 @@ parameter	:
     threshold (AILTx) or is greater than the Clear interrupt high 
     threshold (AIHTx)(Clear is the Clear ADC Channel Data Registers)
 ******************************************************************************/
-static void TCS34725::TCS34725_Set_Interrupt_Threshold(UWORD Threshold_H, UWORD Threshold_L)
+void TCS34725::TCS34725_Set_Interrupt_Threshold(UWORD Threshold_H, UWORD Threshold_L)
 {
     TCS34725_WriteByte(TCS34725_AILTL, Threshold_L & 0xff);
     TCS34725_WriteByte(TCS34725_AILTH, Threshold_L >> 8);
@@ -175,7 +175,7 @@ static void TCS34725::TCS34725_Set_Interrupt_Threshold(UWORD Threshold_H, UWORD 
 /******************************************************************************
 function:   Clear interrupt flag
 ******************************************************************************/
-static void TCS34725::TCS34725_Clear_Interrupt_Flag()
+void TCS34725::TCS34725_Clear_Interrupt_Flag()
 {
     TCS34725_WriteByte(TCS34725_CMD_Clear_INT, 0x00);
 }

@@ -18,7 +18,7 @@
  * delay x ms
 **/
 
-#define delay100US()\
+#define delay100US(uint16_t t)\
 t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
 t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
 t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
@@ -43,7 +43,7 @@ t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
 t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
 t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
 
-#define DEV_Delay_ms(__xms) do{ for(int i = 0; i < 10; 1++) delay100US(); }while(0)
+#define DEV_Delay_ms(__xms) do{ volatile t = 0; for(uint16_t i = 0; i < 10; i++) delay100US(t); }while(0)
 
 
 class I2Cdev{
