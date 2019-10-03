@@ -43,7 +43,14 @@ t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
 t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
 t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
 
-#define DEV_Delay_ms(__xms) do{ volatile t = 0; for(uint16_t i = 0; i < 10; i++) delay100US(t); }while(0)
+#define DEV_Delay_ms(__xms)                 \
+do{                                         \
+    volatile uint16_t t = 0;                \
+    for(uint16_t j = 0; j < __xms; j++) {   \
+    for(uint16_t i = 0; i < 10; i++)        \
+        delay100US(t);                      \
+    }                                       \
+}while(0)
 
 
 class I2Cdev{
