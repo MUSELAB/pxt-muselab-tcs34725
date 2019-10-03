@@ -1,9 +1,9 @@
-enum TCS34725emStyle
+enum TCS34725TemStyle
 {
   //% block="Red" enumval=1
-  GRT_RED = 1,
+  GET_RED = 1,
   //% block="Green" enumval=2
-  GRT_GREEN = 2,
+  GET_GREEN = 2,
   //% block="Bule" enumval=3
-  GRT_BULE = 3,
+  GET_BULE = 3,
 }
