@@ -412,22 +412,22 @@ UWORD TCS34725::TCS34725_GetRGB565(RGB rgb)
 
 UWORD TCS34725::Get_Red(void)
 {
-    return RGB888.R;    
+    return RGB888_t.R;    
 }
 UWORD TCS34725::Get_Green(void)
 {
-    return RGB888.G;    
+    return RGB888_t.G;    
 }
 UWORD TCS34725::Get_Blue(void)
 {
-    return RGB888.B;    
+    return RGB888_t.B;    
 }
 
 void TCS34725::Get_Data(void)
 {
     RGB rgb;
     rgb=TCS34725_Get_RGBData();
-    RGB888=TCS34725_GetRGB888(rgb);
+    RGB888_t=TCS34725_GetRGB888(rgb);
 }
 /******************************************************************************
 function:   Set the onboard LED brightness

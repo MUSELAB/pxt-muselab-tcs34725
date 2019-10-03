@@ -166,7 +166,7 @@ typedef struct{
    UWORD C;
 }RGB;
 
-RGB RGB888;
+RGB RGB888_t;
 
 
 class TCS34725 : public I2Cdev
