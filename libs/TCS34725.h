@@ -123,15 +123,15 @@
 #define TCS34725_CT_Offset 1391.0
 
 
-typedef enum
+enum TCS34725TemStyle
 {
   //% block="Red" enumval=1
-  GRT_RED = 1,
+  GET_RED = 1,
   //% block="Green" enumval=2
-  GRT_GREEN = 2,
+  GET_GREEN = 2,
   //% block="Bule" enumval=3
-  GRT_BULE = 3,
-}TCS34725TemStyle;
+  GET_BULE = 3,
+}
 
 
 class TCS34725 public: I2Cdev
