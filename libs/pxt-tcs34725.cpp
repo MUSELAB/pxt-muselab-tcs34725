@@ -19,19 +19,21 @@ namespace MuseTCS34725{
         TCS34725_dev->Get_Data();
     }
     //%
-    void Show_Colour_Number(TCS34725TemStyle style)
+    UWORD Show_Colour_Number(TCS34725TemStyle style)
     {
+        UWORD data = 0;
         switch(style)
         {
             case GET_RED:
-                TCS34725_dev->Get_Red();
+                data = TCS34725_dev->Get_Red();
             break;
             case GET_GREEN:
-                TCS34725_dev->Get_Green();
+                data = TCS34725_dev->Get_Green();
             break;
             case GET_BLUE:
-                TCS34725_dev->Get_Blue();
+                data = TCS34725_dev->Get_Blue();
             break;
         }
+        return data;
     }
 }
