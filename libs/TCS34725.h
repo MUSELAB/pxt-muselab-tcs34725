@@ -39,8 +39,6 @@
 #include "MicroBitConfig.h"
 #include "MicroBitComponent.h"
 #include "MicroBitEvent.h"
-//#include "MiNodeComponent.h"
-//#include "MiNodeConn.h"
 #include "MicroBitDisplay.h"
 #include "MicroBitSystemTimer.h"
 /**
@@ -134,7 +132,7 @@ enum TCS34725TemStyle
 }
 
 
-class TCS34725 public: I2Cdev
+class TCS34725 : public I2Cdev
 {
 public:
   TCS34725()
