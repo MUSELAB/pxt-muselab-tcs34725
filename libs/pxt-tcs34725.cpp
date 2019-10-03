@@ -7,18 +7,18 @@ namespace MuseTCS34725{
     I2Cdev *i2c_dev;
     TCS34725 *TCS34725_dev;
     //%
-    void Init()
+    void TCS34725_Init()
     {
         i2c_dev = new I2Cdev(i2c);
         TCS34725_dev = new TCS34725();
     }
     //%
-    void Get()
+    void Get_Data()
     {
         TCS34725_dev->Get_Data();
     }
     //%
-    void Get_Colour(TCS34725TemStyle style)
+    void Show_Colour_Number(TCS34725TemStyle style)
     {
         switch(style)
             case GRT_RED：
