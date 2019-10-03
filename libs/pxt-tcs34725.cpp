@@ -24,13 +24,13 @@ namespace MuseTCS34725{
         switch(style)
         {
             case GET_RED:
-                TCS34725_dev->Get_Red();
+                //TCS34725_dev->Get_Red();
             break;
             case GET_GREEN:
-                TCS34725_dev->Get_Green();
+                //TCS34725_dev->Get_Green();
             break;
             case GET_BLUE:
-                TCS34725_dev->Get_Blue();
+                //TCS34725_dev->Get_Blue();
             break;
         }
     }
