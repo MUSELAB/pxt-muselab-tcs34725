@@ -10,7 +10,7 @@ namespace MuseTCS34725 {
     //% shim=MuseTCS34725::TCS34725_Init
 	//% weight=90	
 	//% blockGap=8
-    export function init(): void {
+    export function TCS34725_Init(): void {
         return;
     }
 
@@ -26,7 +26,7 @@ namespace MuseTCS34725 {
     //% shim=MuseTCS34725::Get_Data
 	//% weight=85	
 	//% blockGap=8
-    export function Get(): void {
+    export function Get_Data(): void {
         return;
     }
 
@@ -37,7 +37,7 @@ namespace MuseTCS34725 {
     //% block="Show %FanStatus Colour Number" 
     //% blockId=Show_Red_Number
     //% icon="\uf1ec"
-    //% shim=MuseTCS34725::Get_Colour
+    //% shim=MuseTCS34725::Show_Colour_Number
 	//% weight=85	
 	//% blockGap=8
     export function Show_Colour_Number(style: TCS34725TemStyle): number {
