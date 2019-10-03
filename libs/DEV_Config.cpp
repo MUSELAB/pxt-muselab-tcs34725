@@ -31,7 +31,7 @@ UWORD I2Cdev::DEV_I2C_ReadWord(UBYTE add_)
 {
   char x; uint16_t t;
 
-  mi2c.read(add_, &X, 1);
+  mi2c.read(add_, &x, 1);
   t = x;
   mi2c.read(add_, &x, 1);
   t = (t << 8) | x;
