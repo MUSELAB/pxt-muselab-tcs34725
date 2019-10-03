@@ -6,17 +6,18 @@ namespace MuseTCS34725{
     MicroBitI2C i2c(I2C_SDA0, I2C_SCL0);
     I2Cdev *i2c_dev;
     TCS34725 *TCS34725_dev;
+    //%
     void Init()
     {
         i2c_dev = new I2Cdev(i2c);
         TCS34725_dev = new TCS34725();
     }
-
+    //%
     void Get()
     {
         TCS34725_dev->Get_Data();
     }
-
+    //%
     void Get_Colour(TCS34725TemStyle style)
     {
         switch(style)
