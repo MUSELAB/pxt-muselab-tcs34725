@@ -196,17 +196,17 @@ public:
   void Get_Data(void);
 
 private:
-  static void TCS34725_WriteByte(UBYTE add, UBYTE data);
-  static UBYTE TCS34725_ReadByte(UBYTE add);
-  static UWORD TCS34725_ReadWord(UBYTE add);
-  static void TCS34725_Enable(void);
+  void TCS34725_WriteByte(UBYTE add, UBYTE data);
+  UBYTE TCS34725_ReadByte(UBYTE add);
+  UWORD TCS34725_ReadWord(UBYTE add);
+  void TCS34725_Enable(void);
   void TCS34725_Disable(void);
   void TCS34725_Set_Integration_Time(TCS34725IntegrationTime_t time);
-  static void TCS34725_Interrupt_Enable();
+  void TCS34725_Interrupt_Enable();
   void TCS34725_Interrupt_Disable();
-  static void TCS34725_Set_Interrupt_Persistence_Reg(UBYTE TCS34725_PER);
-  static void TCS34725_Set_Interrupt_Threshold(UWORD Threshold_H, UWORD Threshold_L);
-  static void TCS34725_Clear_Interrupt_Flag();
+  void TCS34725_Set_Interrupt_Persistence_Reg(UBYTE TCS34725_PER);
+  void TCS34725_Set_Interrupt_Threshold(UWORD Threshold_H, UWORD Threshold_L);
+  void TCS34725_Clear_Interrupt_Flag();
 
 };
 
