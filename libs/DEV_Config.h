@@ -1,6 +1,7 @@
 #ifndef _DEV_Config_H_
 #define _DEV_Config_H_
 
+#include "uni"
 #include "mbed.h"
 #include "MicroBit.h"
 
@@ -17,7 +18,33 @@
 /**
  * delay x ms
 **/
-#define DEV_Delay_ms(__xms)    Sleep(__xms)
+
+#define delay100US()\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+t++;t++;t++;t++;t++;t++;t++;t++;t++;t++;\
+
+#define DEV_Delay_ms(__xms) do{ for(int i = 0; i < 10; 1++) delay100US(); }while(0)
 
 
 class I2Cdev{
