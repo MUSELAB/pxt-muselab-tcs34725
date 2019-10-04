@@ -21,7 +21,7 @@ namespace MuseTCS34725{
     //%
     UWORD Show_Colour_Number(TCS34725TemStyle style)
     {
-        int data = 1;
+        int data = 2;
         if (TCS34725_dev == NULL) 
             return 0;
 
