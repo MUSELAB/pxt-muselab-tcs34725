@@ -206,7 +206,7 @@ UBYTE  TCS34725::TCS34725_Init(void)
 	TCS34725_Enable();
 	TCS34725_Interrupt_Enable();
 	//Set the LCD brightness
-	TCS34725_SetLight(40);
+	//TCS34725_SetLight(40);
 
 	return 0;
 }
@@ -427,7 +427,7 @@ void TCS34725::Get_Data(void)
 {
     RGB rgb;
     rgb=TCS34725_Get_RGBData();
-    RGB888=TCS34725_GetRGB888(rgb);
+    this->RGB888=TCS34725_GetRGB888(rgb);
 }
 /******************************************************************************
 function:   Set the onboard LED brightness

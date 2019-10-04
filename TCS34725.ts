@@ -10,8 +10,8 @@ namespace MuseTCS34725 {
     //% shim=MuseTCS34725::TCS34725_Init
 	//% weight=90	
 	//% blockGap=8
-    export function TCS34725_Init(): void {
-        return;
+    export function TCS34725_Init(): number {
+        return 0;
     }
 
 
