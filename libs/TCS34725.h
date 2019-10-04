@@ -121,15 +121,11 @@
 #define TCS34725_CT_Offset 1391.0
 
 
-enum TCS34725TemStyle
-{
-  //% block="Red" enumval=1
-  GET_RED = 1,
-  //% block="Green" enumval=2
-  GET_GREEN = 2,
-  //% block="Bule" enumval=3
-  GET_BLUE = 3,
-};
+typedef enum {
+  GET_RED = 0,
+  GET_GREEN = 1,
+  GET_BLUE = 2,
+}TCS34725TemStyle;
 
 
   /**
