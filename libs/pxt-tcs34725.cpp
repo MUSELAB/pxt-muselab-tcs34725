@@ -22,6 +22,9 @@ namespace MuseTCS34725{
     UWORD Show_Colour_Number(TCS34725TemStyle style)
     {
         UWORD data = 0;
+        if (TCS34725_dev != NULL) 
+            return 0;
+            
         switch(style)
         {
             case GET_RED:
