@@ -21,12 +21,11 @@ namespace MuseTCS34725{
     //%
     UWORD Show_Colour_Number(TCS34725TemStyle style)
     {
-        UWORD data = 0;
-        if (TCS34725_dev != NULL) 
-            return 0;
-            
-        switch(style)
-        {
+        int data = 0;
+        if (TCS34725_dev == NULL) 
+            return (int)10;
+
+        switch(style) {
             case GET_RED:
                 data = TCS34725_dev->Get_Red();
             break;
@@ -37,6 +36,6 @@ namespace MuseTCS34725{
                 data = TCS34725_dev->Get_Blue();
             break;
         }
-        return (int)data;
+        return data;
     }
 }
