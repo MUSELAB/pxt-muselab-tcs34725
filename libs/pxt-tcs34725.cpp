@@ -22,6 +22,7 @@ namespace MuseTCS34725{
     UWORD Show_Colour_Number(TCS34725TemStyle style)
     {
         UWORD data = 0;
+        /*
         switch(style)
         {
             case GET_RED:
@@ -33,7 +34,7 @@ namespace MuseTCS34725{
             case GET_BLUE:
                 data = TCS34725_dev->Get_Blue();
             break;
-        }
-        return data;
+        }*/
+        return (int)style;
     }
 }
