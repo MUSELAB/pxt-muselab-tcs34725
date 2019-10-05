@@ -24,20 +24,17 @@ namespace MuseTCS34725{
     int Show_Colour_Number(TCS34725TemStyle style)
     {   
         if (TCS34725_dev == NULL) 
-            return data;
+            return style;
 
         switch(style) {
             case GET_RED:
-                //data = TCS34725_dev->Get_Red();
-                data = (int)style;
+                data = TCS34725_dev->Get_Red();
             break;
             case GET_GREEN:
                 //data = TCS34725_dev->Get_Green();
-                data = (int)style;
             break;
             case GET_BLUE:
                 //data = TCS34725_dev->Get_Blue();
-                data = (int)style;
             break;
         }
         return data;
