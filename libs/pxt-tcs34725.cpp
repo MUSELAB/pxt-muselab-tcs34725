@@ -23,23 +23,20 @@ namespace MuseTCS34725{
     {
         int data = 2;
         if (TCS34725_dev == NULL) 
-            return 0;
+            return data;
 
         switch(style) {
             case GET_RED:
                 //data = TCS34725_dev->Get_Red();
-                //data = TCS34725_dev->RGB888.R;
-                data = 1;
+                data = (int)style;
             break;
             case GET_GREEN:
                 //data = TCS34725_dev->Get_Green();
-                //data = TCS34725_dev->RGB888.G;
-                data = 10;
+                data = (int)style;
             break;
             case GET_BLUE:
                 //data = TCS34725_dev->Get_Blue();
-                //data = TCS34725_dev->RGB888.B;
-                data = 100;
+                data = (int)style;
             break;
         }
         return data;
