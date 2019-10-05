@@ -23,8 +23,6 @@ namespace MuseTCS34725{
     //%
     int Show_Colour_Number(TCS34725TemStyle style)
     {   
-        data = (int)style;
-        /*
         if (TCS34725_dev == NULL) 
             return data;
 
@@ -42,7 +40,6 @@ namespace MuseTCS34725{
                 data = (int)style;
             break;
         }
-        */
         return data;
     }
 }
