@@ -29,15 +29,15 @@ namespace MuseTCS34725{
 
         switch(style) {
             case GET_RED:
-                return 1
+                return 1;
                 //data = TCS34725_dev->Get_Red();
             break;
             case GET_GREEN:
-                return 2
+                return 2;
                 //data = TCS34725_dev->Get_Green();
             break;
             case GET_BLUE:
-                return 3
+                return 3;
                 //data = TCS34725_dev->Get_Blue();
             break;
         }
