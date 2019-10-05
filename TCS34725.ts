@@ -53,7 +53,6 @@ namespace MuseTCS34725 {
 	//% weight=85	
 	//% blockGap=8
     export function Show_Colour_Number(style: TCS34725TemStyle): number {
-
         return 0;
     }
 }
