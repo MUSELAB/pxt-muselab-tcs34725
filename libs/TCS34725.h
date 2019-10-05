@@ -123,8 +123,8 @@
 
 typedef enum {
   GET_RED = 0,
-  GET_GREEN = 1,
-  GET_BLUE = 2
+  GET_GREEN,
+  GET_BLUE
 }TCS34725TemStyle;
 
 
