@@ -40,7 +40,7 @@ namespace MuseTCS34725 {
     //% shim=MuseTCS34725::Show_Colour_Number
 	//% weight=85	
 	//% blockGap=8
-    export function Show_Colour_Number(style: TCS34725TemStyle): number {
-        return 0;
+    export function Show_Colour_Number(style: TCS34725TemStyle): void {
+        return;
     }
 }
