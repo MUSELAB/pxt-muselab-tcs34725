@@ -24,7 +24,7 @@ namespace MuseTCS34725{
     int Show_Colour_Number(TCS34725TemStyle style)
     {   
         if (TCS34725_dev == NULL) 
-            return style;
+            return (int)style;
 
         switch(style) {
             case GET_RED:
