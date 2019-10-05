@@ -34,7 +34,7 @@ namespace MuseTCS34725 {
      * prints a  TCS34725 red data
      */
     //% weight=87
-    //% block="Show %FanStatus Colour Number" 
+    //% block="Show %style Colour Number" 
     //% blockId=Show_Colour_Number
     //% icon="\uf1ec"
     //% shim=MuseTCS34725::Show_Colour_Number
