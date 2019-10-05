@@ -122,13 +122,16 @@
 
 
 typedef enum {
+  //% block="Red" enumval=0
   GET_RED = 0,
+  //% block="Green" enumval=1
   GET_GREEN = 1,
-  GET_BLUE = 2,
+  //% block="Bule" enumval=2
+  GET_BLUE = 2
 }TCS34725TemStyle;
 
 
-  /**
+/**
 * Integration Time
 **/
 typedef enum
