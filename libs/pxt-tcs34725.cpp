@@ -22,24 +22,27 @@ namespace MuseTCS34725{
     }
     //%
     int Show_Colour_Number(TCS34725TemStyle style)
-    {   
-        /*
+    {
+        
         if (TCS34725_dev == NULL) 
             return (int)style;
 
         switch(style) {
-            case 1:
-                data = TCS34725_dev->Get_Red();
+            case GET_RED:
+                return 1
+                //data = TCS34725_dev->Get_Red();
             break;
-            case 2:
+            case GET_GREEN:
+                return 2
                 //data = TCS34725_dev->Get_Green();
             break;
-            case 3:
+            case GET_BLUE:
+                return 3
                 //data = TCS34725_dev->Get_Blue();
             break;
         }
-        return data;
-        */
-        return style;
+        //return data;
+        
+        //return style;
     }
 }
