@@ -1,18 +1,6 @@
 //% icon="\uf26c"
 //% color="#F59E20" weight="99"
 namespace MuseTCS34725 {
-
-    enum TCS34725TemStyle
-    {  
-        //% block="Red" enumval=0
-        GET_RED ,
-        //% block="Green" enumval=1
-        GET_GREEN ,
-        //% block="Bule" enumval=2
-        GET_BLUE ,
-    }
-
-
     /**
      * initialises the i2c TCS34725 display
      */
