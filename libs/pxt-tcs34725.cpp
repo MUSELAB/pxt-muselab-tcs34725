@@ -28,15 +28,18 @@ namespace MuseTCS34725{
         switch(style) {
             case GET_RED:
                 //data = TCS34725_dev->Get_Red();
-                data = TCS34725_dev->RGB888.R;
+                //data = TCS34725_dev->RGB888.R;
+                data = 10;
             break;
             case GET_GREEN:
                 //data = TCS34725_dev->Get_Green();
-                data = TCS34725_dev->RGB888.G;
+                //data = TCS34725_dev->RGB888.G;
+                data = 100;
             break;
             case GET_BLUE:
                 //data = TCS34725_dev->Get_Blue();
-                data = TCS34725_dev->RGB888.B;
+                //data = TCS34725_dev->RGB888.B;
+                data = 1000;
             break;
         }
         return data;
