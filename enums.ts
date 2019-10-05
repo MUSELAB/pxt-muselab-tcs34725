@@ -4,6 +4,6 @@ enum TCS34725TemStyle
     GET_RED = 0,
     //% block="Green" enumval=1
     GET_GREEN,
-    //% block="Bule" enumval=2
+    //% block="Blue" enumval=2
     GET_BLUE,
 }
