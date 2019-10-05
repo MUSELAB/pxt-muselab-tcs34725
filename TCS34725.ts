@@ -1,6 +1,18 @@
 //% icon="\uf26c"
 //% color="#F59E20" weight="99"
 namespace MuseTCS34725 {
+
+
+    enum TCS34725TemStyle
+    {  
+        //% block="Red" enumval=0
+        GET_RED = 1,
+        //% block="Green" enumval=1
+        GET_GREEN = 2,
+        //% block="Bule" enumval=2
+        GET_BLUE = 3,
+    }
+
     /**
      * initialises the i2c TCS34725 display
      */
@@ -40,7 +52,8 @@ namespace MuseTCS34725 {
     //% shim=MuseTCS34725::Show_Colour_Number
 	//% weight=85	
 	//% blockGap=8
-    export function Show_Colour_Number(style: TCS34725TemStyle): void {
-        return;
+    export function Show_Colour_Number(style: TCS34725TemStyle): number {
+
+        return 0;
     }
 }

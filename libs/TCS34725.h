@@ -120,14 +120,6 @@
 #define TCS34725_CT_Coef 3810.0
 #define TCS34725_CT_Offset 1391.0
 
-
-typedef enum {
-  GET_RED = 1,
-  GET_GREEN = 2,
-  GET_BLUE = 3
-}TCS34725TemStyle;
-
-
   /**
 * Integration Time
 **/
