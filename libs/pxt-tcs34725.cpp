@@ -21,7 +21,7 @@ namespace MuseTCS34725{
         TCS34725_dev->Get_Data();
     }
     //%
-    UWORD Show_Colour_Number(TCS34725TemStyle style)
+    int Show_Colour_Number(TCS34725TemStyle style)
     {   
         /*
         if (TCS34725_dev == NULL) 
@@ -40,6 +40,6 @@ namespace MuseTCS34725{
         }
         return data;
         */
-        return (int)style;
+        return style;
     }
 }
