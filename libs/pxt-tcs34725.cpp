@@ -3,6 +3,7 @@
 using namespace pxt;
 
 namespace MuseTCS34725{
+    int data = 0;
     MicroBitI2C i2c(I2C_SDA0, I2C_SCL0);
     //I2Cdev *i2c_dev;
     TCS34725 *TCS34725_dev = NULL;
@@ -19,9 +20,9 @@ namespace MuseTCS34725{
         TCS34725_dev->Get_Data();
     }
     //%
-    UWORD Show_Colour_Number(TCS34725TemStyle style)
+    int Show_Colour_Number(TCS34725TemStyle style)
     {   
-        int data = 0;
+        data = (int)style
         /*
         if (TCS34725_dev == NULL) 
             return data;
@@ -41,6 +42,6 @@ namespace MuseTCS34725{
             break;
         }
         */
-        return (int)style;
+        return data;
     }
 }
