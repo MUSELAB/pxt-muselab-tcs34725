@@ -12,7 +12,7 @@ namespace MuseTCS34725{
     void TCS34725_Init()
     {
         //i2c_dev = new I2Cdev(i2c);
-        TCS34725_dev = new TCS34725(i2c);  
+        TCS34725_dev = new  (i2c);  
         TCS34725_dev->TCS34725_Init();
     }
     //%
@@ -23,7 +23,7 @@ namespace MuseTCS34725{
     //%
     int Show_Colour_Number(TCS34725TemStyle style)
     {
-        
+        /*
         if (TCS34725_dev == NULL) 
         {
             switch(style) {
@@ -44,5 +44,6 @@ namespace MuseTCS34725{
             
             //return style;
         }
+        */
     }
 }
