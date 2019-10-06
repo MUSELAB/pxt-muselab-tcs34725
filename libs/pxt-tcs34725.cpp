@@ -12,7 +12,7 @@ namespace MuseTCS34725{
     void TCS34725_Init()
     {
         //i2c_dev = new I2Cdev(i2c);
-        TCS34725_dev = new  (i2c);  
+        TCS34725_dev = new(i2c);  
         TCS34725_dev->TCS34725_Init();
     }
     //%
