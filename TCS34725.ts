@@ -6,10 +6,7 @@ namespace MuseTCS34725 {
      */
     //% blockId=TCS34725_init_terminal
     //% block="initialize TCS34725"
-    //% icon="\uf1ec" 
     //% shim=MuseTCS34725::TCS34725_Init
-	//% weight=90	
-	//% blockGap=8
     export function TCS34725_Init(): void {
         return;
     }
@@ -18,14 +15,9 @@ namespace MuseTCS34725 {
     /**
      * Get TCS34725 RGB data
      */
-    //% weight=87
     //% block="Get RGB" 
-    //% async
     //% blockId=Get_TCS34725_RGB_Data
-    //% icon="\uf1ec"
     //% shim=MuseTCS34725::Get_Data
-	//% weight=85	
-	//% blockGap=8
     export function Get_Data(): void {
         return;
     }

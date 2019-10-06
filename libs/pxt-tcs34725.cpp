@@ -21,7 +21,7 @@ namespace MuseTCS34725{
         TCS34725_dev->Get_Data();
     }
     //%
-    int Show_Colour_Number(TCS34725TemStyle style)
+    void Show_Colour_Number(TCS34725TemStyle style)
     {
         /*
         if (TCS34725_dev == NULL) 
